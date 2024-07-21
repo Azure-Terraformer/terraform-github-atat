@@ -24,8 +24,8 @@ module "repo" {
   source  = "Azure-Terraformer/atat/github//modules/repository/terraform/application-environment/service-principal-secret"
   version = "1.0.1"
 
-  application_name = "aztflab"
-  name             = var.name
+  application_name = var.application_name
+  name             = var.github_repo
   commit_user      = var.commit_user
   environments     = local.extended_environments
 

@@ -24,7 +24,7 @@ module "repo" {
   version = "1.0.1"
 
   application_name = var.application_name
-  name             = var.name
+  name             = var.github_repo
   commit_user      = var.commit_user
   environments     = local.extended_environments
 

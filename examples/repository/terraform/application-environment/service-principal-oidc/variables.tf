@@ -1,4 +1,10 @@
-variable "name" {
+variable "github_org" {
+  type        = string
+  description = <<DESCRIPTION
+  The name of the GitHub organization.
+DESCRIPTION
+}
+variable "github_repo" {
   type        = string
   description = <<DESCRIPTION
   The name of the GitHub repository.

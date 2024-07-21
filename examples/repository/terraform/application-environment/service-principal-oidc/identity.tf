@@ -27,7 +27,7 @@ resource "azuread_application_federated_identity_credential" "identity" {
   description    = "Deployments for my-repo"
   audiences      = ["api://AzureADTokenExchange"]
   issuer         = "https://token.actions.githubusercontent.com"
-  subject        = "repo:markti/${var.name}:environment:${each.key}"
+  subject        = "repo:${var.github_org}/${var.github_repo}:environment:${each.key}"
 
 }
 

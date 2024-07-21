@@ -1,4 +1,5 @@
-name             = "foo"
+github_org       = "foo"
+github_repo      = "bar"
 application_name = "aztfoo"
 commit_user = {
   name  = "Azure Terraformer"
