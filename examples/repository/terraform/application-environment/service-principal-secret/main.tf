@@ -20,9 +20,13 @@ locals {
 }
 
 module "repo" {
-  source           = "../../../../../modules/repository/terraform/application-environment/service-principal-secret"
+
+  source  = "Azure-Terraformer/atat/github//modules/repository/terraform/application-environment/service-principal-secret"
+  version = "1.0.1"
+
   application_name = "aztflab"
   name             = var.name
   commit_user      = var.commit_user
   environments     = local.extended_environments
+
 }

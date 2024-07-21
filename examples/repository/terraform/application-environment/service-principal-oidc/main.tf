@@ -19,9 +19,13 @@ locals {
 }
 
 module "repo" {
-  source           = "../../../../../modules/repository/terraform/application-environment/service-principal-oidc"
+
+  source  = "Azure-Terraformer/atat/github//modules/repository/terraform/application-environment/service-principal-oidc"
+  version = "1.0.1"
+
   application_name = var.application_name
   name             = var.name
   commit_user      = var.commit_user
   environments     = local.extended_environments
+
 }
