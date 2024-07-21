@@ -18,24 +18,6 @@ resource "azuread_service_principal" "identity" {
 
 }
 
-resource "azurerm_resource_group" "identity" {
-
-  for_each = var.environments
-
-  name     = "rg-${var.application_name}-${each.key}-identity-${random_string.main.result}"
-  location = var.location
-}
-
-resource "azurerm_user_assigned_identity" "identity" {
-
-  for_each = var.environments
-
-  name                = "mi-terraform-${each.key}-${random_string.main.result}"
-  location            = azurerm_resource_group.identity[each.key].location
-  resource_group_name = azurerm_resource_group.identity[each.key].name
-
-}
-
 resource "azuread_application_federated_identity_credential" "identity" {
 
   for_each = var.environments
@@ -46,6 +28,7 @@ resource "azuread_application_federated_identity_credential" "identity" {
   audiences      = ["api://AzureADTokenExchange"]
   issuer         = "https://token.actions.githubusercontent.com"
   subject        = "repo:markti/${var.name}:environment:${each.key}"
+
 }
 
 data "azurerm_subscription" "main" {

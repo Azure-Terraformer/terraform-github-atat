@@ -103,9 +103,9 @@ By following these instructions, you can effectively use the `application-enviro
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_commit_user"></a> [commit\_user](#input\_commit\_user) | n/a | <pre>object({<br>    name  = string<br>    email = string<br>  })</pre> | n/a | yes |
-| <a name="input_environments"></a> [environments](#input\_environments) | n/a | `map(string)` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_commit_user"></a> [commit\_user](#input\_commit\_user) | The identity of the user that will be used to commit changes to the repository. | <pre>object({<br>    name  = string<br>    email = string<br>  })</pre> | n/a | yes |
+| <a name="input_environments"></a> [environments](#input\_environments) | A map of environment names corresponding to Azure Subscription IDs. | `map(string)` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the GitHub repository. | `string` | n/a | yes |
 
 ## Outputs
 
