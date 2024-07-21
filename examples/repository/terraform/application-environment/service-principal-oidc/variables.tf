@@ -1,18 +1,27 @@
 variable "name" {
-  type = string
+  type        = string
+  description = <<DESCRIPTION
+  The name of the GitHub repository.
+DESCRIPTION
 }
 variable "commit_user" {
   type = object({
     name  = string
     email = string
   })
-}
-variable "location" {
-  type = string
+  description = <<DESCRIPTION
+  The identity of the user that will be used to commit changes to the repository.
+DESCRIPTION
 }
 variable "application_name" {
-  type = string
+  type        = string
+  description = <<DESCRIPTION
+  The name of the application. Used in the naming conventions for resources.
+DESCRIPTION
 }
 variable "environments" {
-  type = map(string)
+  type        = map(string)
+  description = <<DESCRIPTION
+  A map of environment names corresponding to Azure Subscription IDs.
+DESCRIPTION
 }
