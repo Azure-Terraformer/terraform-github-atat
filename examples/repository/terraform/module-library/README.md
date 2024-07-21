@@ -55,3 +55,37 @@ In this declaration:
 - `name`, `commit_user`, `environment`, and `modules` are set to the respective variables from your `tfvars` file.
 
 With this setup, the `environment` variable in your module now correctly aligns with the updated structure in the `tfvars` file. Run `terraform init` to initialize the Terraform configuration and `terraform apply` to apply it with these updated variables. Ensure that your `terraform.tfvars` file is correctly formatted and accessible to Terraform.
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_repo"></a> [repo](#module\_repo) | ../../../../modules/repository/terraform/module-library | n/a |
+
+## Resources
+
+No resources.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_commit_user"></a> [commit\_user](#input\_commit\_user) |  | <pre>object({<br>    name  = string<br>    email = string<br>  })</pre> | n/a | yes |
+| <a name="input_environment"></a> [environment](#input\_environment) |  | <pre>object({<br>    subscription_id = string<br>    tenant_id       = string<br>    client_id       = string<br>    client_secret   = string<br>  })</pre> | n/a | yes |
+| <a name="input_modules"></a> [modules](#input\_modules) |  | `map(any)` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) |  | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->

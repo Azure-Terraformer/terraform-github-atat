@@ -64,3 +64,56 @@ In this declaration:
 3. Execute Terraform commands like `terraform plan` and `terraform apply` to deploy and manage your Azure resources according to the configurations in these files.
 
 By following these instructions, you can effectively use the `application-environment` module to manage your Azure infrastructure across different environments as defined in your `tfvars` file.
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | ~> 2.53.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | ~> 2.53.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_backend_dev"></a> [backend\_dev](#module\_backend\_dev) | markti/azure-terraformer/azurerm//modules/terraform/backend/baseline | 1.0.16 |
+| <a name="module_backend_prod"></a> [backend\_prod](#module\_backend\_prod) | markti/azure-terraformer/azurerm//modules/terraform/backend/baseline | 1.0.16 |
+| <a name="module_repo"></a> [repo](#module\_repo) | ../../../../../modules/repository/terraform/application-environment/service-principal-oidc | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azuread_application.identity](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/application) | resource |
+| [azuread_application_federated_identity_credential.identity](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/application_federated_identity_credential) | resource |
+| [azuread_service_principal.identity](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/service_principal) | resource |
+| [azurerm_resource_group.identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
+| [azurerm_role_assignment.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
+| [azurerm_user_assigned_identity.identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
+| [random_string.main](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
+| [azuread_client_config.current](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/data-sources/client_config) | data source |
+| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
+| [azurerm_subscription.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subscription) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_application_name"></a> [application\_name](#input\_application\_name) | n/a | `string` | n/a | yes |
+| <a name="input_commit_user"></a> [commit\_user](#input\_commit\_user) | n/a | <pre>object({<br>    name  = string<br>    email = string<br>  })</pre> | n/a | yes |
+| <a name="input_environments"></a> [environments](#input\_environments) | n/a | `map(string)` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | n/a | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
