@@ -10,7 +10,7 @@ module "sp" {
 
 }
 
-data azurerm_subscription "main" {
+data "azurerm_subscription" "main" {
 
   for_each = var.environments
 
@@ -21,7 +21,7 @@ data azurerm_subscription "main" {
 resource "azurerm_role_assignment" "main" {
 
   for_each = var.environments
-  
+
   scope                = data.azurerm_subscription.main[each.key].id
   role_definition_name = "Contributor"
   principal_id         = module.sp[each.key].service_principal.object_id
