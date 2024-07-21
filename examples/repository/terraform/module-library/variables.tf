@@ -1,11 +1,17 @@
 variable "name" {
-  type = string
+  type        = string
+  description = <<DESCRIPTION
+
+DESCRIPTION
 }
 variable "commit_user" {
   type = object({
     name  = string
     email = string
   })
+  description = <<DESCRIPTION
+
+DESCRIPTION
 }
 variable "environment" {
   type = object({
@@ -14,7 +20,13 @@ variable "environment" {
     client_id       = string
     client_secret   = string
   })
+  description = <<DESCRIPTION
+
+DESCRIPTION
 }
 variable "modules" {
-  type = map
+  type        = map(any)
+  description = <<DESCRIPTION
+
+DESCRIPTION
 }
