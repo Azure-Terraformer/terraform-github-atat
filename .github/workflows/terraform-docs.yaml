@@ -1,0 +1,18 @@
+name: Terraform Docs
+
+on:
+  pull_request:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.TERRAFORM_DOCS_PAT_TOKEN }}
+        ref: ${{ github.event.pull_request.head.ref }}
+    - name: Generate TF docs
+      uses: terraform-docs/gh-actions@v1.0.0
+      with:
+        find-dir: /
+        git-push: true
