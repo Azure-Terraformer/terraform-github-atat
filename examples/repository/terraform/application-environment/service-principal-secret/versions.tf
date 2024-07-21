@@ -18,6 +18,8 @@ terraform {
 # Configure the GitHub Provider
 provider "github" {}
 
+provider "azuread" {}
+
 provider "azurerm" {
   features {}
 }
