@@ -35,9 +35,7 @@ Furthermore, the module employs the GitHub AT-AT module library to establish a G
 | [azuread_application.identity](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/application) | resource |
 | [azuread_application_federated_identity_credential.identity](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/application_federated_identity_credential) | resource |
 | [azuread_service_principal.identity](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/service_principal) | resource |
-| [azurerm_resource_group.identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
 | [azurerm_role_assignment.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
-| [azurerm_user_assigned_identity.identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
 | [random_string.main](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 | [azuread_client_config.current](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/data-sources/client_config) | data source |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
@@ -47,11 +45,10 @@ Furthermore, the module employs the GitHub AT-AT module library to establish a G
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_application_name"></a> [application\_name](#input\_application\_name) | n/a | `string` | n/a | yes |
-| <a name="input_commit_user"></a> [commit\_user](#input\_commit\_user) | n/a | <pre>object({<br>    name  = string<br>    email = string<br>  })</pre> | n/a | yes |
-| <a name="input_environments"></a> [environments](#input\_environments) | n/a | `map(string)` | n/a | yes |
-| <a name="input_location"></a> [location](#input\_location) | n/a | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_application_name"></a> [application\_name](#input\_application\_name) | The name of the application. Used in the naming conventions for resources. | `string` | n/a | yes |
+| <a name="input_commit_user"></a> [commit\_user](#input\_commit\_user) | The identity of the user that will be used to commit changes to the repository. | <pre>object({<br>    name  = string<br>    email = string<br>  })</pre> | n/a | yes |
+| <a name="input_environments"></a> [environments](#input\_environments) | A map of environment names corresponding to Azure Subscription IDs. | `map(string)` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the GitHub repository. | `string` | n/a | yes |
 
 ## Outputs
 
