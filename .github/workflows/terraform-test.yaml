@@ -1,0 +1,33 @@
+name: Terraform-Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  terraform-test:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ inputs.environment }}
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - id: setup
+      name: Setup `terraform`
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: ${{ inputs.terraform_version }}
+
+    - id: terraform-test
+      name: Terraform Test
+      env:
+        ARM_SUBSCRIPTION_ID: ${{ vars.DEV_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ vars.ARM_TENANT_ID }}
+        ARM_CLIENT_ID: ${{ vars.TERRAFORM_ARM_CLIENT_ID }}
+        ARM_CLIENT_SECRET: ${{ secrets.TERRAFORM_ARM_CLIENT_SECRET }}
+      working-directory: ${{ inputs.working_directory }}
+      run: |
+        terraform init
+        terraform test -verbose

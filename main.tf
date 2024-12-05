@@ -6,9 +6,9 @@ data "github_user" "current" {
 resource "github_repository" "main" {
 
   name        = var.repository_name
-  description = "My awesome codebase"
+  description = var.repository_description
 
-  visibility = "private"
+  visibility = var.repository_visibility
   auto_init  = true
 
 }
@@ -16,13 +16,13 @@ resource "github_repository" "main" {
 module "atat" {
 
   source  = "Azure-Terraformer/atat-application-environment/github"
-  version = "1.0.1"
+  version = "1.0.3"
 
   application_name  = var.repository_name
   repository_name   = github_repository.main.name
   commit_user       = var.commit_user
   environments      = local.extended_environments
-  terraform_version = "1.9.8"
+  terraform_version = var.terraform_version
 
 }
 

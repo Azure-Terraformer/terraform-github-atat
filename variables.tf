@@ -4,6 +4,12 @@ variable "github_organization" {
 variable "repository_name" {
   type = string
 }
+variable "repository_visibility" {
+  type = string
+}
+variable "repository_description" {
+  type = string
+}
 variable "commit_user" {
 
 }
@@ -12,4 +18,8 @@ variable "environments" {
     subscription_id = string
     branch_name     = string
   }))
+}
+variable "terraform_version" {
+  type    = string
+  default = "1.9.8"
 }
