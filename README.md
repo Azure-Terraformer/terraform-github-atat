@@ -19,5 +19,7 @@ Welcome to the GitHub Automate the Automation with Terraform (AT-AT) Module, or 
 - **GitHub Personal Access Token**: Essential for GitHub account interactions.
 - **Azure Access**: You need to be able to provision Resource Groups and Storage Accounts.
 - **Entra Access**: You need to be able to create Applications, Service Principals and Federated Identity Credentials.
+
+
 <!-- BEGIN_TF_DOCS -->
 <!-- END_TF_DOCS -->
