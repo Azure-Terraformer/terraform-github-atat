@@ -22,3 +22,6 @@ variable "azure_dev_subscription" {
 variable "azure_prod_subscription" {
   type = string
 }
+variable "terraform_version" {
+  type = string
+}

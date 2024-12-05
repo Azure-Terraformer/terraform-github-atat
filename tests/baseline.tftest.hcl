@@ -14,6 +14,7 @@ run "environment" {
     github_repository_name        = "github-atat-demo-${run.setup.repository_name_suffix}"
     github_repository_visibility  = "public"
     github_repository_description = "GitHub AT-AT Integration Test"
+    terraform_version             = "1.9.8"
   }
 
 }

@@ -10,7 +10,7 @@ module "application_environment" {
   repository_name        = var.github_repository_name
   repository_description = var.github_repository_description
   repository_visibility  = var.github_repository_visibility
-  terraform_version      = "1.9.8"
+  terraform_version      = var.terraform_version
 
   commit_user = {
     name  = var.github_username
