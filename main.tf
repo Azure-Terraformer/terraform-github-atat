@@ -18,7 +18,7 @@ module "atat" {
   source  = "Azure-Terraformer/atat-application-environment/github"
   version = "1.0.3"
 
-  application_name  = var.repository_name
+  application_name  = var.application_name
   repository_name   = github_repository.main.name
   commit_user       = var.commit_user
   environments      = local.extended_environments

@@ -5,8 +5,12 @@ module "backend_dev" {
   }
 
   source   = "Azure-Terraformer/terraform-backend/azurerm"
-  version  = "1.0.2"
+  version  = "1.0.3"
   location = "westus3"
+  tags = {
+    application_name = var.application_name
+    environment_name = "dev"
+  }
 
 }
 
@@ -17,8 +21,12 @@ module "backend_prod" {
   }
 
   source   = "Azure-Terraformer/terraform-backend/azurerm"
-  version  = "1.0.2"
+  version  = "1.0.3"
   location = "westus3"
+  tags = {
+    application_name = var.application_name
+    environment_name = "prod"
+  }
 
 }
 

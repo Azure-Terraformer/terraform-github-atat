@@ -6,6 +6,7 @@ module "application_environment" {
     azurerm.prod = azurerm.prod
   }
 
+  application_name       = var.application_name
   github_organization    = var.github_organization
   repository_name        = var.github_repository_name
   repository_description = var.github_repository_description
