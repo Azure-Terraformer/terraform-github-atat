@@ -26,3 +26,7 @@ variable "terraform_version" {
   type    = string
   default = "1.9.8"
 }
+variable "delete_branch_on_merge" {
+  type    = bool
+  default = true
+}
