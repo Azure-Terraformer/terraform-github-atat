@@ -9,10 +9,11 @@ resource "random_string" "main" {
 module "github_identity" {
 
   source  = "Azure-Terraformer/github-credential/azuread"
-  version = "1.0.8"
+  version = "1.0.10"
 
   for_each = var.environments
 
+  name                = "${var.github_organization}-${var.repository_name}-${each.key}"
   github_organization = var.github_organization
   repository_name     = var.repository_name
   entity_type         = "environment"

@@ -1,10 +1,6 @@
-module "application_environment" {
-  source = "../../"
+module "app" {
 
-  providers = {
-    azurerm.dev  = azurerm.dev
-    azurerm.prod = azurerm.prod
-  }
+  source = "../../modules/azure-dual-backend-app"
 
   application_name       = var.application_name
   github_organization    = var.github_organization
@@ -22,10 +18,17 @@ module "application_environment" {
     dev = {
       subscription_id = var.azure_dev_subscription
       branch_name     = "develop"
+      backend         = var.nonprod_backend
+    }
+    test = {
+      subscription_id = var.azure_dev_subscription
+      branch_name     = "release"
+      backend         = var.nonprod_backend
     }
     prod = {
       subscription_id = var.azure_prod_subscription
       branch_name     = "main"
+      backend         = var.prod_backend
     }
   }
 

@@ -9,7 +9,7 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 4.10.0"
       configuration_aliases = [
-        azurerm.dev,
+        azurerm.nonprod,
         azurerm.prod,
       ]
     }
@@ -24,17 +24,16 @@ terraform {
 provider "github" {
   owner = var.github_organization
 }
-provider "azuread" {}
 # LAME
 provider "azurerm" {
-  subscription_id = var.azure_dev_subscription
+  subscription_id = var.azure_nonprod_subscription
 
   features {}
 }
 # DEV Subscription
 provider "azurerm" {
-  alias           = "dev"
-  subscription_id = var.azure_dev_subscription
+  alias           = "nonprod"
+  subscription_id = var.azure_nonprod_subscription
 
   features {}
 }

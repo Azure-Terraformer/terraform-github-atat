@@ -6,7 +6,7 @@ run "setup" {
 
 run "environment" {
   module {
-    source = "./examples/baseline"
+    source = "./examples/azure-dual-backend-stand-alone"
   }
 
   variables {

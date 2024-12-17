@@ -1,6 +1,15 @@
 variable "application_name" {
   type = string
 }
+variable "location" {
+  type = string
+}
+variable "azure_nonprod_subscription" {
+  type = string
+}
+variable "azure_prod_subscription" {
+  type = string
+}
 variable "github_organization" {
   type = string
 }
@@ -17,12 +26,6 @@ variable "github_username" {
   type = string
 }
 variable "github_email" {
-  type = string
-}
-variable "azure_dev_subscription" {
-  type = string
-}
-variable "azure_prod_subscription" {
   type = string
 }
 variable "terraform_version" {
