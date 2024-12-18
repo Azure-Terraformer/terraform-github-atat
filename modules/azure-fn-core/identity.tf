@@ -35,7 +35,7 @@ resource "azurerm_role_assignment" "main" {
   for_each = var.environments
 
   scope                = data.azurerm_subscription.main[each.key].id
-  role_definition_name = "Contributor"
+  role_definition_name = "Owner"
   principal_id         = module.github_identity[each.key].service_principal.object_id
 
 }

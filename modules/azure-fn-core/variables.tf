@@ -20,6 +20,12 @@ variable "environments" {
   type = map(object({
     subscription_id = string
     branch_name     = string
+    backend = object({
+      resource_group_name  = string
+      storage_account_name = string
+      state_container_name = string
+      plan_container_name  = string
+    })
   }))
 }
 variable "terraform_version" {
@@ -29,4 +35,20 @@ variable "terraform_version" {
 variable "delete_branch_on_merge" {
   type    = bool
   default = true
+}
+variable "delay_after_environment_creation" {
+  type    = number
+  default = 10
+}
+variable "primary_location" {
+  type = string
+}
+variable "os_type" {
+  type = string
+}
+variable "sku_name" {
+  type = string
+}
+variable "retention_in_days" {
+  type = number
 }
