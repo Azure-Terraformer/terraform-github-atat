@@ -16,7 +16,10 @@ module "terraform_gitflow" {
   environments = local.branch_name_map
 
   # we don't want the actions firing when we start pushing commits
-  depends_on = [module.terraform_codebase]
+  depends_on = [
+    module.terraform_codebase,
+    module.dotnet_codebase
+  ]
 
 }
 
