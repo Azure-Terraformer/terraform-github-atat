@@ -9,7 +9,7 @@ module "app" {
   repository_visibility  = var.github_repository_visibility
   terraform_version      = var.terraform_version
   primary_location       = "eastus2"
-  os_type                = "Linux"
+  os_type                = "Windows"
   core_name              = "qonq-core"
   root_namespace         = var.root_namespace
 
