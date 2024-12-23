@@ -20,6 +20,8 @@ variable "environments" {
   type = map(object({
     subscription_id = string
     branch_name     = string
+    reviewing_users = list(string)
+    reviewing_teams = list(string)
     backend = object({
       resource_group_name  = string
       storage_account_name = string

@@ -22,16 +22,22 @@ module "app" {
     dev = {
       subscription_id = var.azure_dev_subscription
       branch_name     = "develop"
+      reviewing_teams = []
+      reviewing_users = []
       backend         = var.nonprod_backend
     }
     test = {
       subscription_id = var.azure_dev_subscription
       branch_name     = "release"
+      reviewing_teams = []
+      reviewing_users = []
       backend         = var.nonprod_backend
     }
     prod = {
       subscription_id = var.azure_prod_subscription
       branch_name     = "main"
+      reviewing_teams = []
+      reviewing_users = []
       backend         = var.prod_backend
     }
   }

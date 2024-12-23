@@ -6,7 +6,7 @@ locals {
       tenant_id       = data.azuread_client_config.current.tenant_id
       client_id       = module.github_identity[key].application.client_id
       branch_name     = value.branch_name
-      reviewers       = []
+      reviewers       = value.reviewing_users
       backend         = value.backend
     }
   }
