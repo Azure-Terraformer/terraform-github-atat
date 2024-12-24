@@ -1,3 +1,5 @@
+The Azure Dual Backend refers to a Terraform module designed to provision a Terraform state backend across two separate Azure regions. This setup enhances the resilience, availability, and reliability of your Terraform state management by providing redundancy and geographic distribution. Here's an in-depth look at what the Azure Dual Backend entails, its benefits, and guidance on how to implement it.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

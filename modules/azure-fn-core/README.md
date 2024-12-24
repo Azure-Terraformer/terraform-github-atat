@@ -1,3 +1,7 @@
+The `azure-fn-core` Module leverages the Azure Dual Backend to manage Terraform state across both non-production and production environments, ensuring robust state management and high availability. Designed to provision shared infrastructure for Azure Functions applications, this module optimizes costs and enhances operability by deploying a multi-region Azure Functions App Service Plan. 
+
+Additionally, it establishes central resources within the primary region, including a Log Analytics Workspace, Application Insights, and Key Vault, to facilitate comprehensive observability and secure secret management. By centralizing these essential services, the Azure-Fn-Core Module streamlines the deployment process, reduces Azure expenditures, and ensures scalable, reliable infrastructure for Azure Functions applications across multiple environments.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

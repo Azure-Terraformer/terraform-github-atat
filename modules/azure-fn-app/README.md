@@ -1,3 +1,8 @@
+
+The `azure-fn-app` module builds upon the `azure-fn-core` module to deploy Azure Function Apps seamlessly onto both regional and centralized infrastructure designed for multiple Azure Functions. This module automates the provisioning of Azure Functions using Terraform, integrated with GitHub Actions and Azure CLI to streamline the deployment workflow. 
+
+Additionally, it includes a robust C# codebase that leverages the App Insights observability stack and securely accesses Key Vault resources within each region. By utilizing the centralized infrastructure for observability and security, the Azure-Fn-App Module not only reduces operational costs but also ensures scalable, reliable, and maintainable Function App deployments across non-production and production environments. This comprehensive setup facilitates efficient management and monitoring of Azure Functions, enhancing both development and operational workflows.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
