@@ -1,6 +1,6 @@
 module "backend" {
 
-  source = "../../modules/azure-dual-backend-core"
+  source = "../../modules/azure-dual-backend"
 
   providers = {
     azurerm.nonprod = azurerm.nonprod
