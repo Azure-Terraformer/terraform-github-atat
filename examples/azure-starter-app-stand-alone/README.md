@@ -18,7 +18,7 @@
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_app"></a> [app](#module\_app) | ../../modules/azure-dual-backend-app | n/a |
-| <a name="module_backend"></a> [backend](#module\_backend) | ../../modules/azure-dual-backend-core | n/a |
+| <a name="module_backend"></a> [backend](#module\_backend) | ../../modules/azure-dual-backend | n/a |
 
 ## Resources
 
