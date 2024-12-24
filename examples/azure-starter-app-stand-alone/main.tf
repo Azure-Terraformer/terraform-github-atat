@@ -1,6 +1,26 @@
+resource "random_string" "backend_suffix" {
+  length  = 8
+  upper   = false
+  special = false
+}
+
+module "backend" {
+
+  source = "../../modules/azure-dual-backend"
+
+  providers = {
+    azurerm.nonprod = azurerm.nonprod
+    azurerm.prod    = azurerm.prod
+  }
+
+  name     = "tf${random_string.backend_suffix.result}"
+  location = var.location
+
+}
+
 module "app" {
 
-  source = "../../modules/azure-dual-backend-app"
+  source = "../../modules/azure-starter-app"
 
   application_name       = var.application_name
   github_organization    = var.github_organization
@@ -16,19 +36,19 @@ module "app" {
 
   environments = {
     dev = {
-      subscription_id = var.azure_dev_subscription
+      subscription_id = var.azure_nonprod_subscription
       branch_name     = "develop"
-      backend         = var.nonprod_backend
+      backend         = module.backend.nonprod
     }
     test = {
-      subscription_id = var.azure_dev_subscription
+      subscription_id = var.azure_nonprod_subscription
       branch_name     = "release"
-      backend         = var.nonprod_backend
+      backend         = module.backend.nonprod
     }
     prod = {
       subscription_id = var.azure_prod_subscription
       branch_name     = "main"
-      backend         = var.prod_backend
+      backend         = module.backend.prod
     }
   }
 
