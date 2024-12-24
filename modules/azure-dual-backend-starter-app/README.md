@@ -1,3 +1,5 @@
+The Dual-Backend Starter App module provisions a comprehensive Azure Terraform Starter application that establishes an end-to-end Terraform workflow utilizing a dual backend configuration for both non-production and production environments. This module sets up a simple Azure Terraform solution, including Terraform source code that deploys an Azure Resource Group. It integrates GitHub Actions to implement the Terraform Core Workflow, enabling automated infrastructure management. Additionally, the module configures GitHub Actions to impersonate an Entra ID identity, ensuring secure authentication with Azure and seamless interaction with the dual backend. By combining these components, the Dual-Backend Starter App streamlines the setup of resilient and scalable Terraform workflows, facilitating efficient and secure infrastructure provisioning across multiple environments.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
