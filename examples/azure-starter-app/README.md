@@ -15,7 +15,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_app"></a> [app](#module\_app) | ../../modules/azure-dual-backend-app | n/a |
+| <a name="module_app"></a> [app](#module\_app) | ../../modules/azure-starter-app | n/a |
 
 ## Resources
 
