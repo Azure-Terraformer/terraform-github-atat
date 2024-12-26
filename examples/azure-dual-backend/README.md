@@ -31,8 +31,8 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_azure_nonprod_subscription"></a> [azure\_nonprod\_subscription](#input\_azure\_nonprod\_subscription) | The Azure Subscription ID where the Non-PROD Terraform State Backend will be provisioned. | `string` | n/a | yes |
 | <a name="input_azure_prod_subscription"></a> [azure\_prod\_subscription](#input\_azure\_prod\_subscription) | The Azure Subscription ID where the PROD Terraform State Backend will be provisioned. | `string` | n/a | yes |
-| <a name="input_location"></a> [location](#input\_location) | The geographical location where the resources will be deployed. | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | The name of the environment to create. | `string` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | The Azure region where the Terraform State Backends will be provisioned. | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the environment containing dual Terraform State Backends that you'd like to create. | `string` | n/a | yes |
 
 ## Outputs
 
