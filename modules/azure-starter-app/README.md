@@ -54,5 +54,7 @@ Additionally, the module configures GitHub Actions to impersonate an Entra ID id
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_repository_name"></a> [repository\_name](#output\_repository\_name) | n/a |
 <!-- END_TF_DOCS -->

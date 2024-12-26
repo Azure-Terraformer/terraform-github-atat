@@ -26,7 +26,7 @@ variable "repository_visibility" {
   description = "The visibility level of the GitHub repository. Accepted values are 'public', 'private', or 'internal'. Determines who can view and access the repository."
 
   validation {
-    condition     = contains(["public", "private", "internal"], var.github_repository_visibility)
+    condition     = contains(["public", "private", "internal"], var.repository_visibility)
     error_message = "GitHub Repository visibility must be either 'public', 'private', or 'internal'."
   }
 }
