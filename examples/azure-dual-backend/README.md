@@ -1,3 +1,7 @@
+The Dual-Backend Example Module is a Terraform module designed to provision dual Terraform state backends for your infrastructure state management. Serving as a foundational example, this module sets up two separate state backends to ensure clean separation of environments between Production and Non-Production. 
+
+It is specifically intended to be integrated with other GitHub AT-AT modules that utilize dual Terraform state backends. By implementing this dual-backend configuration, the module supports efficient disaster recovery, improves operational continuity, and ensures consistent state synchronization, making it an essential component for scalable and secure infrastructure deployments within the GitHub AT-AT ecosystem.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

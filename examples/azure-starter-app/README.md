@@ -1,3 +1,9 @@
+The Azure Starter App Module extends the functionality of the Dual Backend module by provisioning an Azure Terraform deployment solution that leverages dual backends for Terraform state management. This module sets up a simple yet effective Terraform configuration to deploy Azure resources, ensuring high availability and resilience through the dual backend architecture. 
+
+The Azure Starter App Module integrates GitHub Actions to automate the Terraform core workflow, including Plan, Apply, and Destroy operations for manual executions. It also implements a GitFlow strategy, automatically running terraform plan on pull requests (PRs) and terraform apply on pushes to the main branch. This seamless integration facilitates continuous infrastructure deployment and promotes best practices in infrastructure as code (IaC). 
+
+By combining dual backend state management with automated GitHub Actions workflows, the Azure Starter App Module provides a robust foundation for efficient, secure, and scalable Azure infrastructure deployments, making it an ideal starting point for teams adopting Terraform within the GitHub AT-AT ecosystem.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

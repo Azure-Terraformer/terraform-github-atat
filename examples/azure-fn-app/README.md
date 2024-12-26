@@ -1,3 +1,7 @@
+The Azure Function App Example Module builds upon the Dual Backend and Azure Function Core modules to deploy robust Azure Functions seamlessly. This module provisions a C# solution tailored for Azure Functions, ensuring it leverages the shared infrastructure and dual Terraform state backends for high availability and reliability. 
+
+Additionally, it integrates comprehensive GitHub Actions workflows to support continuous integration, including build processes, unit tests, and integration tests for the .NET codebase. A dedicated GitHub Actions workflow is also provided to automate the deployment of the C# solution to the Azure Functions app. By combining infrastructure provisioning with automated CI/CD pipelines, the Azure Function App Example Module facilitates efficient development, testing, and deployment of scalable serverless applications on Azure.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

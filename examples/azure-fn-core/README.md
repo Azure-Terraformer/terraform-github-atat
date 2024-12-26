@@ -1,3 +1,9 @@
+The Azure Function Core Example Module serves as a practical demonstration of how to utilize the `azure-fn-core` module to provision the essential shared infrastructure for Azure Functions. This module deploys regional resources such as App Service Plans to support function apps across multiple Azure regions, ensuring scalability and high availability. 
+
+Additionally, it sets up centralized resources shared across the environment, including Log Analytics Workspace, Application Insights, and Key Vault, to provide comprehensive observability, monitoring, and secure secret management. 
+
+By integrating both regional and centralized services, the Azure Function Core Example Module exemplifies best practices for building a robust, secure, and maintainable infrastructure for Azure Functions, making it an invaluable resource for developers and DevOps teams aiming to optimize their serverless deployments.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

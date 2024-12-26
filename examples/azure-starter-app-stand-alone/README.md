@@ -1,3 +1,7 @@
+The Azure Starter App Stand Alone Module is an all-in-one Terraform solution that seamlessly provisions both the Dual Backend and Azure Starter App without any external dependencies. Designed for simplicity and efficiency, this module enables users to set up, test, and tear down their entire Terraform infrastructure in a single operation. By integrating dual Terraform state backends for non-production and production environments, it ensures high availability and robust state management. 
+
+Additionally, it deploys a complete Azure Terraform Starter App with automated GitHub Actions workflows for Terraform operations. Ideal for rapid testing, demonstrations, or getting started with Terraform on Azure, the Stand Alone Module provides everything needed to quickly deploy and manage a resilient and scalable Azure infrastructure effortlessly.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
