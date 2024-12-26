@@ -38,8 +38,8 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_location"></a> [location](#input\_location) | The geographical location where the resources will be deployed. | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | The name of the environment being created. | `string` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | The Azure region where the Terraform State Backends will be provisioned. | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | The name of the environment containing dual Terraform State Backends that you'd like to create. | `string` | n/a | yes |
 
 ## Outputs
 
