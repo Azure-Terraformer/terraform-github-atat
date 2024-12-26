@@ -19,7 +19,7 @@ variable "github_organization" {
   The GitHub organization under which the repository will be created. This should be the exact name of the GitHub organization.
 DESCRIPTION
 }
-variable "github_repository_name" {
+variable "repository_name" {
   type        = string
   description = <<DESCRIPTION
   The name of the GitHub repository to be created. This name should be unique within the specified GitHub organization.
@@ -28,16 +28,16 @@ variable "github_repository_name" {
   that is provisioned to Azure.
 DESCRIPTION
 }
-variable "github_repository_visibility" {
+variable "repository_visibility" {
   type        = string
   description = "The visibility level of the GitHub repository. Accepted values are 'public', 'private', or 'internal'. Determines who can view and access the repository."
 
   validation {
-    condition     = contains(["public", "private", "internal"], var.github_repository_visibility)
+    condition     = contains(["public", "private", "internal"], var.repository_visibility)
     error_message = "GitHub Repository visibility must be either 'public', 'private', or 'internal'."
   }
 }
-variable "github_repository_description" {
+variable "repository_description" {
   type        = string
   description = <<DESCRIPTION
   A brief description of the GitHub repository. This helps in understanding the purpose and scope of the repository.

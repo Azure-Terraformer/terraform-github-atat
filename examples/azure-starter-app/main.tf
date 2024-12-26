@@ -4,9 +4,9 @@ module "app" {
 
   application_name       = var.application_name
   github_organization    = var.github_organization
-  repository_name        = var.github_repository_name
-  repository_description = var.github_repository_description
-  repository_visibility  = var.github_repository_visibility
+  repository_name        = var.repository_name
+  repository_description = var.repository_description
+  repository_visibility  = var.repository_visibility
   terraform_version      = var.terraform_version
 
   commit_user = {
