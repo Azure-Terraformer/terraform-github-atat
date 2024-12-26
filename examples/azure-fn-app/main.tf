@@ -20,14 +20,14 @@ module "app" {
 
   environments = {
     dev = {
-      subscription_id = var.azure_dev_subscription
+      subscription_id = var.azure_nonprod_subscription
       branch_name     = "develop"
       reviewing_teams = []
       reviewing_users = []
       backend         = var.nonprod_backend
     }
     test = {
-      subscription_id = var.azure_dev_subscription
+      subscription_id = var.azure_nonprod_subscription
       branch_name     = "release"
       reviewing_teams = []
       reviewing_users = []

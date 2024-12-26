@@ -23,5 +23,5 @@ provider "azuread" {}
 # LAME
 provider "azurerm" {
   features {}
-  subscription_id = var.azure_dev_subscription
+  subscription_id = var.azure_nonprod_subscription
 }

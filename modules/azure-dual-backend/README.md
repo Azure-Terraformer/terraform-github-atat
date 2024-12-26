@@ -1,5 +1,15 @@
 The Azure Dual Backend refers to a Terraform module designed to provision a Terraform state backend across two separate Azure regions. This setup enhances the resilience, availability, and reliability of your Terraform state management by providing redundancy and geographic distribution. Here's an in-depth look at what the Azure Dual Backend entails, its benefits, and guidance on how to implement it.
 
+You probably only need one Terraform State Backend per Subscription as the Subscription is the most common RBAC boundary. You should compartmentalize your workloads into Subscriptions and use the Subscription's RBAC boundary to protect your environment.
+
+You should carefully gaurd access to the following Role Definitions:
+
+- `Storage Blob Data Owner`
+- `Storage Blob Data Contributor`
+- `Storage Blob Data Reader`
+
+These Built-in Role Definitions will grant read access to your Terraform State Backend thus allowing users possessing these permissions to read the Terraform State files stored within. Terraform State files may contain sensitive and even secret data. As a result, they should be consisdered secrets themselves.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

@@ -1,22 +1,42 @@
 variable "application_name" {
   type        = string
-  description = "The name of the application."
+  description = <<DESCRIPTION
+  The name of the application to be deployed. This name is used for resource identification and naming conventions within the infrastructure.
+
+  It's best to keep this short and simple while also ensuring it is easily identifiable and relatively unique within your organization (or at least within the Subscriptions you are targetting).
+DESCRIPTION
 }
 variable "github_organization" {
   type        = string
-  description = "The GitHub organization where the repository will be created."
+  description = <<DESCRIPTION
+  The GitHub organization under which the repository will be created. This should be the exact name of the GitHub organization.
+DESCRIPTION
 }
 variable "repository_name" {
   type        = string
-  description = "The name of the GitHub repository."
+  description = <<DESCRIPTION
+  The name of the GitHub repository to be created. This name should be unique within the specified GitHub organization.
+
+  The GitHub repository name should correlate to the `application_name` as it will contain the source code for the infrastructure 
+  that is provisioned to Azure.
+DESCRIPTION
 }
 variable "repository_visibility" {
   type        = string
-  description = "The visibility level of the GitHub repository (e.g., 'public' or 'private')."
+  description = "The visibility level of the GitHub repository. Accepted values are 'public', 'private', or 'internal'. Determines who can view and access the repository."
+
+  validation {
+    condition     = contains(["public", "private", "internal"], var.github_repository_visibility)
+    error_message = "GitHub Repository visibility must be either 'public', 'private', or 'internal'."
+  }
 }
 variable "repository_description" {
   type        = string
-  description = "A brief description of the GitHub repository."
+  description = <<DESCRIPTION
+  A brief description of the GitHub repository. This helps in understanding the purpose and scope of the repository.
+
+  This should describe the workload represented by the `application_name`.
+DESCRIPTION
 }
 variable "commit_user" {
   type = object({
@@ -38,36 +58,56 @@ variable "environments" {
       plan_container_name  = string
     })
   }))
-  description = "A map of environments, each containing configuration details such as subscription ID, branch name, reviewing users and teams, and backend settings."
+  description = <<DESCRIPTION
+  Configuration for each of the environments for this application.
+
+  Each Environment has a name which is supplied by the key of the map. 
+  Each Environment has a long-lived environment on the specified `branch_name`.
+  Each Environment can be provisioned within the context of an Azure Subscription specified by `subscription_id`.
+  Each Environment can have its own Terraform State Backend configuration which consists of an Azure Storage Account and containers for both state files and plan files.
+DESCRIPTION
 }
 variable "terraform_version" {
   type        = string
   default     = "1.9.8"
-  description = "The version of Terraform to use for this module."
+  description = "Specifies the version of Terraform to use. Defaults to '1.9.8'."
 }
 variable "delete_branch_on_merge" {
   type        = bool
   default     = true
-  description = "Determines whether to automatically delete feature branches after they are merged."
+  description = "The setting that controls whether the GitHub repository deletes the feature branch automatically after the merge."
 }
 variable "delay_after_environment_creation" {
   type        = number
   default     = 10
-  description = "The delay in seconds to wait after creating an environment before proceeding."
+  description = <<DESCRIPTION
+  GitHub Environments have a glitch that causes them to not be available immediately after creation is reported. Environment variables 
+  will fail unless there is some time granted to allow for the Environment creation to complete. This setting adds a fixed amount of time
+  after the creation of the environment before provisioning additional resources.
+DESCRIPTION
 }
 variable "primary_location" {
   type        = string
-  description = "The primary geographical location where resources will be deployed."
+  description = <<DESCRIPTION
+  The primary Azure region where the Azure Functions Core Environment will be provisioned."
+DESCRIPTION
 }
 variable "os_type" {
   type        = string
-  description = "The operating system type for the resources (e.g., 'linux', 'windows')."
+  description = <<DESCRIPTION
+  The operating system type for Azure Function Service Plan that will be provisioned."
+DESCRIPTION
 }
 variable "core_name" {
   type        = string
-  description = "The core name used for referencing foundational components from this project."
+  description = <<DESCRIPTION
+  The name of the Azure Functions Core Environment.
+DESCRIPTION
 }
 variable "root_namespace" {
   type        = string
-  description = "The root namespace under which all classes will be organized within the .NET solution."
+  description = <<DESCRIPTION
+  The .NET Namespace that will be used to the names of the Visual Studio Solution and Project files as well as the default .NET namespace within the 
+  C# codebase.
+DESCRIPTION
 }

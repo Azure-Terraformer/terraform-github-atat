@@ -1,10 +1,12 @@
 variable "name" {
   type        = string
-  description = "The name of the environment to create."
+  description = <<DESCRIPTION
+  The name of the environment containing dual Terraform State Backends that you'd like to create.
+DESCRIPTION
 }
 variable "location" {
   type        = string
-  description = "The geographical location where the resources will be deployed."
+  description = "The Azure region where the Terraform State Backends will be provisioned."
 }
 variable "azure_nonprod_subscription" {
   type        = string
