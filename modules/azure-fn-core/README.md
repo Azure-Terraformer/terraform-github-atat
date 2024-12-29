@@ -24,11 +24,11 @@ Additionally, it establishes central resources within the primary region, includ
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_action-azure-login-test"></a> [action-azure-login-test](#module\_action-azure-login-test) | Azure-Terraformer/action-azure-login-test/github | 1.0.0 |
-| <a name="module_github_environments-terraform-azure"></a> [github\_environments-terraform-azure](#module\_github\_environments-terraform-azure) | Azure-Terraformer/environment-terraform-azure/github | 1.0.3 |
+| <a name="module_action_azure_login"></a> [action\_azure\_login](#module\_action\_azure\_login) | Azure-Terraformer/action-azure-login-test/github | 1.0.1 |
+| <a name="module_codebase"></a> [codebase](#module\_codebase) | Azure-Terraformer/codebase-terraform-azure-fn-core/github | 1.0.11 |
+| <a name="module_gitflow"></a> [gitflow](#module\_gitflow) | Azure-Terraformer/action-azure-application/github | 1.0.31 |
+| <a name="module_github_environments"></a> [github\_environments](#module\_github\_environments) | Azure-Terraformer/environment-terraform-azure/github | 1.0.3 |
 | <a name="module_github_identity"></a> [github\_identity](#module\_github\_identity) | Azure-Terraformer/github-credential/azuread | 1.0.10 |
-| <a name="module_terraform_codebase"></a> [terraform\_codebase](#module\_terraform\_codebase) | Azure-Terraformer/codebase-terraform-azure-fn-core/github | 1.0.11 |
-| <a name="module_terraform_gitflow"></a> [terraform\_gitflow](#module\_terraform\_gitflow) | Azure-Terraformer/action-azure-application/github | 1.0.30 |
 
 ## Resources
 
