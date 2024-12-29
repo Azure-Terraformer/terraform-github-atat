@@ -24,7 +24,10 @@ Additionally, the module configures GitHub Actions to impersonate an Entra ID id
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_atat"></a> [atat](#module\_atat) | Azure-Terraformer/atat-application-environment/github | 1.0.5 |
+| <a name="module_action_azure_login"></a> [action\_azure\_login](#module\_action\_azure\_login) | Azure-Terraformer/action-azure-login-test/github | 1.0.1 |
+| <a name="module_codebase"></a> [codebase](#module\_codebase) | Azure-Terraformer/codebase-terraform-azure-application/github | 1.0.4 |
+| <a name="module_gitflow"></a> [gitflow](#module\_gitflow) | Azure-Terraformer/action-azure-application/github | 1.0.31 |
+| <a name="module_github_environments"></a> [github\_environments](#module\_github\_environments) | Azure-Terraformer/environment-terraform-azure/github | 1.0.3 |
 | <a name="module_github_identity"></a> [github\_identity](#module\_github\_identity) | Azure-Terraformer/github-credential/azuread | 1.0.10 |
 
 ## Resources
@@ -32,6 +35,9 @@ Additionally, the module configures GitHub Actions to impersonate an Entra ID id
 | Name | Type |
 |------|------|
 | [azurerm_role_assignment.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
+| [github_actions_variable.application_name](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_variable) | resource |
+| [github_branch.main](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch) | resource |
+| [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_default) | resource |
 | [github_repository.main](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [random_string.main](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 | [azuread_client_config.current](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/data-sources/client_config) | data source |

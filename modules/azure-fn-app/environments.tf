@@ -1,4 +1,3 @@
-
 locals {
   extended_environments = {
     for key, value in var.environments : key => {

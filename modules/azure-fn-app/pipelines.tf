@@ -8,7 +8,7 @@ locals {
 module "terraform_gitflow" {
 
   source  = "Azure-Terraformer/action-azure-application/github"
-  version = "1.0.30"
+  version = "1.0.31"
 
   repository   = var.repository_name
   branch       = github_branch.main.branch
@@ -25,7 +25,7 @@ module "terraform_gitflow" {
 
 module "action-azure-login-test" {
   source  = "Azure-Terraformer/action-azure-login-test/github"
-  version = "1.0.0"
+  version = "1.0.1"
 
   repository  = var.repository_name
   branch      = github_branch.main.branch

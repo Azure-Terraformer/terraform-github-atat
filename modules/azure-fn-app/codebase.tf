@@ -1,7 +1,7 @@
 module "terraform_codebase" {
 
   source  = "Azure-Terraformer/codebase-terraform-azure-fn-app/github"
-  version = "1.0.20"
+  version = "1.0.21"
 
   repository       = var.repository_name
   branch           = github_branch.main.branch
@@ -16,7 +16,7 @@ module "terraform_codebase" {
 module "dotnet_codebase" {
 
   source  = "Azure-Terraformer/codebase-terraform-azure-fn-app-dotnet/github"
-  version = "1.0.30"
+  version = "1.0.31"
 
   repository     = var.repository_name
   branch         = github_branch.main.branch
