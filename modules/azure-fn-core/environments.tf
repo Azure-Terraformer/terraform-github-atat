@@ -12,13 +12,13 @@ locals {
   }
 }
 
-module "github_environments-terraform-azure" {
+module "github_environments" {
   source  = "Azure-Terraformer/environment-terraform-azure/github"
   version = "1.0.3"
 
   repository_name                  = var.repository_name
   terraform_version                = var.terraform_version
-  terraform_working_directory      = module.terraform_codebase.path
+  terraform_working_directory      = module.codebase.path
   delay_after_environment_creation = 10
   environments                     = local.extended_environments
 

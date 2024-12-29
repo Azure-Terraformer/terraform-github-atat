@@ -1,4 +1,4 @@
-module "terraform_codebase" {
+module "codebase" {
 
   source  = "Azure-Terraformer/codebase-terraform-azure-fn-core/github"
   version = "1.0.11"
