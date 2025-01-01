@@ -8,7 +8,7 @@ locals {
 module "gitflow" {
 
   source  = "Azure-Terraformer/action-azure-application/github"
-  version = "1.0.31"
+  version = "1.0.32"
 
   repository   = var.repository_name
   branch       = github_branch.main.branch
