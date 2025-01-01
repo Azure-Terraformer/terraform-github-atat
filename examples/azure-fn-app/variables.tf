@@ -92,3 +92,7 @@ variable "prod_backend" {
   })
   description = "Configuration for the backend storage used in the production environment. Includes resource group, storage account, and container names for Terraform state and plans."
 }
+variable "core_name" {
+  type        = string
+  description = "The name used for the Azure Functions Core environment we want to deploy into."
+}

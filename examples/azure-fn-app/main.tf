@@ -10,7 +10,7 @@ module "app" {
   terraform_version      = var.terraform_version
   primary_location       = "eastus2"
   os_type                = "Windows"
-  core_name              = "qonq-core"
+  core_name              = var.core_name
   root_namespace         = var.root_namespace
 
   commit_user = {
