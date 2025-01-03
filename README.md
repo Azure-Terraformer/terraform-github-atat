@@ -20,6 +20,15 @@ Welcome to the GitHub Automate the Automation with Terraform (AT-AT) Module, or 
 - **Azure Access**: You need to be able to provision Resource Groups and Storage Accounts.
 - **Entra Access**: You need to be able to create Applications, Service Principals and Federated Identity Credentials.
 
+## Release Notes
+
+### v1.0.20
+
+- Added EventGrid Topic to `azure-fn-core` to support shared event-based communication.
+
+### v1.0.19
+
+- Added EventGrid Topic to `azure-fn-app` to support internal event-based communication within each Azure Function hosted Microservice.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
