@@ -21,4 +21,6 @@ module "github_environments-terraform-azure" {
   delay_after_environment_creation = 10
   environments                     = local.extended_environments
 
+  depends_on = [github_branch_default.default]
+
 }

@@ -20,6 +20,12 @@ Welcome to the GitHub Automate the Automation with Terraform (AT-AT) Module, or 
 - **Azure Access**: You need to be able to provision Resource Groups and Storage Accounts.
 - **Entra Access**: You need to be able to create Applications, Service Principals and Federated Identity Credentials.
 
+Make sure you can delete repos when doing destroy:
+
+```
+gh auth refresh -h github.com -s delete_repo
+```
+
 ## Release Notes
 
 ### v1.0.20
