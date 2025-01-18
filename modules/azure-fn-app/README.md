@@ -26,11 +26,11 @@ Additionally, it includes a robust C# codebase that leverages the App Insights o
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_action-azure-login-test"></a> [action-azure-login-test](#module\_action-azure-login-test) | Azure-Terraformer/action-azure-login-test/github | 1.0.1 |
-| <a name="module_dotnet_codebase"></a> [dotnet\_codebase](#module\_dotnet\_codebase) | Azure-Terraformer/codebase-terraform-azure-fn-app-dotnet/github | 1.0.31 |
+| <a name="module_dotnet_codebase"></a> [dotnet\_codebase](#module\_dotnet\_codebase) | Azure-Terraformer/codebase-terraform-azure-fn-app-dotnet/github | 1.0.39 |
 | <a name="module_github_environments-terraform-azure"></a> [github\_environments-terraform-azure](#module\_github\_environments-terraform-azure) | Azure-Terraformer/environment-terraform-azure/github | 1.0.3 |
 | <a name="module_github_identity"></a> [github\_identity](#module\_github\_identity) | Azure-Terraformer/github-credential/azuread | 1.0.10 |
-| <a name="module_terraform_codebase"></a> [terraform\_codebase](#module\_terraform\_codebase) | Azure-Terraformer/codebase-terraform-azure-fn-app/github | 1.0.21 |
-| <a name="module_terraform_gitflow"></a> [terraform\_gitflow](#module\_terraform\_gitflow) | Azure-Terraformer/action-azure-application/github | 1.0.31 |
+| <a name="module_terraform_codebase"></a> [terraform\_codebase](#module\_terraform\_codebase) | Azure-Terraformer/codebase-terraform-azure-fn-app/github | 1.0.26 |
+| <a name="module_terraform_gitflow"></a> [terraform\_gitflow](#module\_terraform\_gitflow) | Azure-Terraformer/action-azure-application/github | 1.0.32 |
 
 ## Resources
 
