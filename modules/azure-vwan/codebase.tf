@@ -1,7 +1,7 @@
 module "codebase" {
 
   source  = "Azure-Terraformer/codebase-terraform-azure-vwan-core/github"
-  version = "1.0.1"
+  version = "1.0.3"
 
   repository         = var.repository_name
   branch             = github_branch.main.branch
