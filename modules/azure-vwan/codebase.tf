@@ -1,7 +1,7 @@
 module "codebase" {
 
   source  = "Azure-Terraformer/codebase-terraform-azure-vwan-core/github"
-  version = "1.0.3"
+  version = "1.0.5"
 
   repository         = var.repository_name
   branch             = github_branch.main.branch
@@ -9,5 +9,6 @@ module "codebase" {
   primary_location   = var.primary_location
   base_address_space = var.base_address_space
   vpn_address_space  = var.vpn_address_space
+  dns_address_space  = var.dns_address_space
 
 }
