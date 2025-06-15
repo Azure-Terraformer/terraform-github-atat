@@ -1,7 +1,7 @@
 module "codebase" {
 
   source  = "Azure-Terraformer/codebase-terraform-azure-jekyll-site/github"
-  version = "1.0.15"
+  version = "1.0.17"
 
   repository   = var.repository_name
   branch       = github_branch.main.branch
