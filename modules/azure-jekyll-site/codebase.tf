@@ -9,6 +9,5 @@ module "codebase" {
   commit_user    = var.commit_user
   location       = var.location
   environments   = local.branch_name_map
-  hosting_option = var.hosting_option
 
 }
