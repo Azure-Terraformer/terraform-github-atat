@@ -9,6 +9,7 @@ module "app" {
   repository_visibility  = var.repository_visibility
   terraform_version      = var.terraform_version
   location               = "westus2"
+  hosting_option         = "static-website"
 
   commit_user = {
     name  = var.github_username

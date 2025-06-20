@@ -1,13 +1,14 @@
 module "codebase" {
 
   source  = "Azure-Terraformer/codebase-terraform-azure-jekyll-site/github"
-  version = "1.0.18"
+  version = "1.0.19"
 
-  repository   = var.repository_name
-  branch       = github_branch.main.branch
-  path         = "src/terraform"
-  commit_user  = var.commit_user
-  location     = var.location
-  environments = local.branch_name_map
+  repository     = var.repository_name
+  branch         = github_branch.main.branch
+  path           = "src/terraform"
+  commit_user    = var.commit_user
+  location       = var.location
+  environments   = local.branch_name_map
+  hosting_option = var.hosting_option
 
 }

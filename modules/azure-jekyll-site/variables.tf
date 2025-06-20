@@ -79,3 +79,12 @@ variable "location" {
   type        = string
   description = "Azure Region to provision the Jekyll Web Site into."
 }
+variable "hosting_option" {
+  description = "The type of storage to provision. Must be either 'storage' or 'static-website'."
+  type        = string
+
+  validation {
+    condition     = contains(["storage", "static-website"], var.hosting_option)
+    error_message = "Invalid storage_type: must be either 'storage' or 'static-website'."
+  }
+}
